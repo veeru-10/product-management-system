@@ -2,8 +2,8 @@
 
 import { ProductType } from "@/types/type";
 import { useRouter } from "next/navigation";// router vs navigator
-import { useAppSelector, useAppDispatch } from "@/lib/hooks";
-import { addToCart } from "@/lib/features/cart/cartSlice";
+import { useAppSelector, useAppDispatch } from "@/store/hooks";
+import { addToCart } from "@/store/slices/cartSlice/cart.slice";
 import Image from "next/image";
 
 type ProductCardProps = {

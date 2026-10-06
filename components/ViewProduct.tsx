@@ -1,7 +1,7 @@
 "use client"
 import { useRouter } from "next/navigation"
-import { useAppDispatch, useAppSelector } from "@/lib/hooks"
-import { addToCart } from "@/lib/features/cart/cartSlice"
+import { useAppDispatch, useAppSelector } from "@/store/hooks"
+import { addToCart } from "@/store/slices/cartSlice/cart.slice"
 import Image from "next/image"
 
 

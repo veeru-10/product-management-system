@@ -15,6 +15,7 @@ export interface ProductType  {
   rating : number
 } 
 
+
 export interface ProductsApiResponse {
   data : ProductType[],
   totalProducts: number,

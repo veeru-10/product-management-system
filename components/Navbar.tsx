@@ -2,7 +2,7 @@
 import { FaCartPlus } from "react-icons/fa6";
 import Link from "next/link";
 import { NavbarProps } from '@/types/type'
-import { useAppSelector } from "@/lib/hooks";
+import { useAppSelector } from "@/store/hooks";
 export default function Navbar({ search, onSearchChange }: NavbarProps) {
   const cartCount = useAppSelector(state => state.cart.cartCount)
   return (

@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useAppSelector, useAppDispatch } from "@/lib/hooks";
-import { removeFromCart } from "@/lib/features/cart/cartSlice";
+import { useAppSelector, useAppDispatch } from "@/store/hooks";
+import { removeFromCart } from "@/store/slices/cartSlice/cart.slice";
 
 export default function CartComponent() {
   const dispatch = useAppDispatch();
