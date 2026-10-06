@@ -1,4 +1,4 @@
-import { ProductsApiResponse } from "@/types/type";
+import { ProductsApiResponse } from "@/types/products/product.type";
 import { productsApi } from "@/store/apis/product.api";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
@@ -18,7 +18,6 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 //   }
 // };
 
-// export const getProductsByService = createAsyncThunk<ProductType[], void, { rejectValue : string}>(
 export const getProductsByService = createAsyncThunk(
   'products/fetchProducts',
   async(_, thunkAPI) => {
@@ -30,7 +29,6 @@ export const getProductsByService = createAsyncThunk(
     const responseData : ProductsApiResponse = await response.json();
     return responseData.data;
     } catch (error) {
-      // const errorMessage = error instanceof Error ? error.message : "failed to fetch data"
       return thunkAPI.rejectWithValue(error);
     }
   }

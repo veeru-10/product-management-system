@@ -30,10 +30,10 @@ export default function ViewProduct({id} : {id : string}) {
           <button 
           className="px-4 py-2 border border-green-600/50 bg-green-500/5 rounded-xl cursor-pointer"
           onClick={isInCart ? () => router.push("/cart") : () => dispatch(addToCart(product))}>{isInCart ? "View Cart" : "Add To Cart"}</button>
-          <button 
+          {/* <button 
           type="button"
           className="px-4 py-2 border border-blue-500/40 bg-blue-600/5 rounded-xl cursor-pointer"
-          >update Product</button>
+          >update Product</button> */}
         </div>
       </div>
     </div>

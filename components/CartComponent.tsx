@@ -11,7 +11,7 @@ export default function CartComponent() {
     dispatch(removeFromCart(id))
   }
   return (
-    <section className="">
+    <section>
       <h1 className="mb-6 text-2xl font-bold">Your cart</h1>
       {cartItems.length === 0 ? (
         <div className="space-y-4">
