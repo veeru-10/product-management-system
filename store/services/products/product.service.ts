@@ -1,5 +1,5 @@
 import { ProductsApiResponse } from "@/types/type";
-import { productsApi } from "@/apis/productsApi";
+import { productsApi } from "@/store/apis/product.api";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 
