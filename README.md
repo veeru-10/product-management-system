@@ -8,6 +8,6 @@ createAsyncThunk -  A function that accepts a Redux action type string and a cal
 
 callback - A callback function that should return a promise containing the result of some asynchronous logic
 
-thunkAPI: an object containing all of the parameters that are normally passed to a Redux thunk function, as well as additional options: dispatch, getState, extra, requestId, signal, rejectWithValue(value, [meta]), fulfillWithValue(value, meta)
+thunkAPI: an object containing all of the parameters such as dispatch, getState, extra, requestId, signal, rejectWithValue(value, [meta]), fulfillWithValue(value, meta)
 
 https://fakestoreapi.noksha.dev/api/products

@@ -23,16 +23,16 @@ export default function CartComponent() {
       ) : (
         <div className="">
           {cartItems.map((item) => (
-            <div key={item.id} className="flex items-center justify-between gap-4 py-4">
-              <div>
+            <div key={item._id} className="flex items-center justify-between gap-4 py-4">
+              <div className="flex flex-col space-y-3">
                 <h2 className="font-semibold">{item.title}</h2>
-                <p className="text-sm text-green-700">₹{item.price}</p>
+                <p className="text-sm text-green-700">${item.price}</p>
                 <p className="text-sm text-white/40">{item.description}</p>
               </div>
               <button
                 type="button"
                 className="shrink-0 rounded-md border border-red-600/40 px-3 py-2 text-sm text-red-700 cursor-pointer"
-                onClick={() => handleRemoveFromCart(item.id)}
+                onClick={() => handleRemoveFromCart(item._id)}
               >
                 Remove
               </button>
