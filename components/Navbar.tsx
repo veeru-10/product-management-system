@@ -3,7 +3,7 @@ import { FaCartPlus } from "react-icons/fa6";
 import Link from "next/link";
 import { NavbarProps } from '@/types/type'
 import { useAppSelector } from "@/store/hooks";
-export default function Navbar({ search, onSearchChange }: NavbarProps) {
+export default function Navbar({ search, onSearchChange, onClickLogout }: NavbarProps) {
   const cartCount = useAppSelector(state => state.cart.cartCount)
   return (
     <nav className='flex mb-4 px-4 items-center'>
@@ -19,6 +19,9 @@ export default function Navbar({ search, onSearchChange }: NavbarProps) {
         value={search}
         onChange={(event) => onSearchChange(event.target.value)}
       />
+      <button 
+      className="bg-black text-white px-4 py-2 rounded-lg cursor-pointer"
+      onClick={onClickLogout}>Logout</button>
       <Link href="/cart" className="relative inline-block cursor-pointer">
         <div>
           <FaCartPlus size={25}/>

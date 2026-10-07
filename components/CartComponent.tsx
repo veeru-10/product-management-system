@@ -16,7 +16,7 @@ export default function CartComponent() {
       {cartItems.length === 0 ? (
         <div className="space-y-4">
           <p>Your cart is empty.</p>
-          <Link href="/" className="inline-block text-green-700 underline">
+          <Link href="/dashboard" className="inline-block text-green-700 underline">
             Continue shopping
           </Link>
         </div>
@@ -27,7 +27,7 @@ export default function CartComponent() {
               <div className="flex flex-col space-y-3">
                 <h2 className="font-semibold">{item.title}</h2>
                 <p className="text-sm text-green-700">${item.price}</p>
-                <p className="text-sm text-white/40">{item.description}</p>
+                <p className="text-sm text-black/40">{item.description}</p>
               </div>
               <button
                 type="button"
