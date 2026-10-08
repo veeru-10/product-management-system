@@ -52,19 +52,27 @@ export default function Login() {
     >
       {({ isSubmitting }) => (
         <Form>
-          <div>
-            <p>Login Page</p>
+          <div className='mt-10 max-w-lg mx-auto flex items-center justify-center flex-col'>
+            <p className='text-3xl font-bold text-center mb-6'>Login Page</p>
             <div>
-              <Field type="email" name="email" placeholder="Email" />
+              <Field 
+              type="email" 
+              name="email"  
+              placeholder="Email"
+              className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-amber-600 mb-4"/>
               <ErrorMessage name="email" component="div"/>
             </div>
             <div>
-              <Field type="password" name="password" placeholder="Password" />
+              <Field 
+              type="password" 
+              name="password" 
+              placeholder="Password" 
+              className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-amber-600"/>
               <ErrorMessage name="password" component="div"/>
             </div>
             <button
               type="submit"
-              className="border border-amber-600 px-4 py-2 rounded mt-4"
+              className="border border-amber-600 px-4 py-2 rounded mt-4 cursor-pointer"
               disabled={isSubmitting}
             >
               {isSubmitting ? 'Logging in...' : 'Submit'}

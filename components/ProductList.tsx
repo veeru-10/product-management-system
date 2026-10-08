@@ -7,7 +7,6 @@ import ProductCard from "@/components/ProductCard";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { getProductsByService } from "@/store/services/products/product.service";
 import { useRouter } from "next/navigation";
-import { users } from "@/data/users";
 
 export default function ProductList() {
   const dispatch = useAppDispatch();
@@ -23,30 +22,28 @@ export default function ProductList() {
     }
   }
   
-
   useEffect(()=>{
+    // const accessToken = Cookies.get("accessToken");
+    // const refreshToken = Cookies.get("refreshToken");
 
-    const accessToken = Cookies.get("accessToken");
-    const refreshToken = Cookies.get("refreshToken");
-
-    if(!accessToken || !refreshToken) {
-      router.push('/login');
-      return;
-    }
+    // if(!accessToken || !refreshToken) {
+    //   router.push('/login');
+    //   return;
+    // }
     
-    const validUser = users.find((user) => user.accessToken && user.refreshToken)
-    if(!validUser) {
-      Cookies.remove('accessToken')
-      Cookies.remove('refreshToken')
-      router.push('/login');
-      return;
-    }
+    // const validUser = users.find((user) => user.accessToken === accessToken && user.refreshToken === refreshToken)
+    // if(!validUser) {
+    //   Cookies.remove('accessToken')
+    //   Cookies.remove('refreshToken')
+    //   router.push('/login');
+    //   return;
+    // }
     try {
       dispatch(getProductsByService())
     } catch (error) {
       console.log("data fetching issue",error);
     }
-  }, [dispatch, router])
+  }, [dispatch])
 
   // useEffect(()=>{
   //   dispatch(getProductsByService())

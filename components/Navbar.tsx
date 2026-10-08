@@ -14,11 +14,12 @@ export default function Navbar({ search, onSearchChange, onClickLogout }: Navbar
       <div className='flex-1 justify-end flex items-center gap-4'>
         <input
         type="search"
-        className='px-4 py-2 border border-white/20 outline-none rounded-full '
-        placeholder="Search products"
+        className='px-4 py-2 border border-black/10 shadow outline-none rounded-full '
+        placeholder="Search products.."
         value={search}
         onChange={(event) => onSearchChange(event.target.value)}
       />
+      <Link href="/about"><p className="text-slate-600 font-bold">About</p></Link>
       <button 
       className="bg-black text-white px-4 py-2 rounded-lg cursor-pointer"
       onClick={onClickLogout}>Logout</button>
