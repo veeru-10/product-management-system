@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { ProductType } from "@/types/products/product.type";
+import { ProductType } from "@/types/product.type";
 import { getProductsByService } from "@/store/services/products/product.service";
 import { initialProductsState } from "@/store/slices/initialState/product.initial";
 

@@ -1,4 +1,4 @@
-import { ProductsApiResponse } from "@/types/products/product.type";
+import { ProductsApiResponse } from "@/types/product.type";
 import { productsApi } from "@/store/apis/product.api";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 

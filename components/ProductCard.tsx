@@ -1,6 +1,6 @@
 "use client";
 
-import { ProductType } from "@/types/products/product.type";
+import { ProductType } from "@/types/product.type";
 import { useRouter } from "next/navigation";// router vs navigator
 import { useAppSelector, useAppDispatch } from "@/store/hooks";
 import { addToCart } from "@/store/slices/cartSlice/cart.slice";

@@ -22,5 +22,5 @@ export default function proxy(request : NextRequest) {
 }
 
 export const config = {
-  matcher : ['/dashboard/:path*', '/about/:path*', '/cart/:path*'] //run the middleware for the dashboard or any routes under dashboard
+  matcher : ['/dashboard/:path*', '/chart/:path*', '/cart/:path*'] //run the middleware for the dashboard or any routes under dashboard
 }

@@ -1,4 +1,4 @@
-import { ProductsState } from "@/types/products/product.type"
+import { ProductsState } from "@/types/product.type"
 
 export const initialProductsState : ProductsState = {
   productItems : [],

@@ -19,7 +19,7 @@ export default function Navbar({ search, onSearchChange, onClickLogout }: Navbar
         value={search}
         onChange={(event) => onSearchChange(event.target.value)}
       />
-      <Link href="/about"><p className="text-slate-600 font-bold">About</p></Link>
+      <Link href="/chart"><p className="text-slate-600 font-bold">chart</p></Link>
       <button 
       className="bg-black text-white px-4 py-2 rounded-lg cursor-pointer"
       onClick={onClickLogout}>Logout</button>
