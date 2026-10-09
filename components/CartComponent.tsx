@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useAppSelector, useAppDispatch } from "@/store/hooks";
 import { removeFromCart } from "@/store/slices/cartSlice/cart.slice";
+import { ProductType } from "@/types/product.type";
 
 export default function CartComponent() {
   const dispatch = useAppDispatch();
@@ -22,7 +23,7 @@ export default function CartComponent() {
         </div>
       ) : (
         <div className="">
-          {cartItems.map((item) => (
+          {cartItems.map((item : ProductType) => (
             <div key={item._id} className="flex items-center justify-between gap-4 py-4">
               <div className="flex flex-col space-y-3">
                 <h2 className="font-semibold">{item.title}</h2>
